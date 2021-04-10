@@ -21,7 +21,7 @@ secenek = ["1", "2", "3", "4", "5", "6", "7", "c", "d"]
 
 def kapat(): exit("\nKullanici Tarafindan Kapatildi\n")
 
-def secim(secilen:str): #isleri basitlestirmek icin fonksiyon
+def secim(secilen:str): #Biraz daha duzenli gozuksun diye uygun ciktiyi ureten fonksiyon
     x = secilen.lower()
     if x not in secenek: #x secenek listesinde yoksa
         return "\nHatali komut!\n\tBu ({}) bir komut degil.".format(x)
@@ -39,8 +39,8 @@ def secim(secilen:str): #isleri basitlestirmek icin fonksiyon
 
 
 def islemler(komut:str):
-    gecersiz = "\nGECERSIZ VERI\n"
-    hesap = YardimciAraclar.islem()
+    gecersiz = "\nGECERSIZ VERI\n" #Surekli yazmamak icin degisken
+    hesap = YardimciAraclar.islem() #YardimciAraclar.islem() i ornekledim
     
     if komut not in secenek: return komut
     

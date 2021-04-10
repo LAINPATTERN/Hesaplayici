@@ -17,9 +17,9 @@ def dialog(yazi:str, sure=0.03):
 
 
 class islem(): #Düzenli dursun diye islemlerin saklanacagi yer.
-    import HazirMetinler
-    import math
-    hata = "HATALI VERI TIPI ALGILANDI"
+    import HazirMetinler #Metinleri sakladigim yeri aldim
+    import math #pi sayisi icin lazim olacak
+    hata = "HATALI VERI TIPI ALGILANDI" #Surekli yazmamak icin degiskene atadim
     
     
     def KupHacmi(self, a):
@@ -58,7 +58,7 @@ class islem(): #Düzenli dursun diye islemlerin saklanacagi yer.
 
     def KureHacmi(self, r, pi = math.pi):
         try:
-            r, pi = float(r), float(pi)
+            r, pi = float(r), float(pi) #r = Yaricap
         except (TypeError, ValueError):
             return self.hata
         else:
@@ -69,7 +69,7 @@ class islem(): #Düzenli dursun diye islemlerin saklanacagi yer.
 
     def SilindirHacmi(self, r, h, pi = math.pi):
         try:
-            r, h, pi = float(r), float(h), float(pi)
+            r, h, pi = float(r), float(h), float(pi) #r = Yaricap|h = Yukseklik
         except (TypeError, ValueError):
             return self.hata
         else:
@@ -80,7 +80,7 @@ class islem(): #Düzenli dursun diye islemlerin saklanacagi yer.
             
     def KarePiramitHacmi(self, a, h):
         try:
-            a, h = float(a), float(h)
+            a, h = float(a), float(h) #a = Taban Alani|h = Yukseklik
         except (TypeError, ValueError):
             return self.hata
         else:
@@ -91,7 +91,7 @@ class islem(): #Düzenli dursun diye islemlerin saklanacagi yer.
             
     def KoniHacmi(self, r, h, pi = math.pi):
         try:
-            r, h, pi = float(r), float(h), float(pi)
+            r, h, pi = float(r), float(h), float(pi) #r = Yaricap|h = Yukseklik
         except (TypeError, ValueError):
             return self.hata
         else:
@@ -102,9 +102,9 @@ class islem(): #Düzenli dursun diye islemlerin saklanacagi yer.
             
             
 
-def debug():
-    from random import randint
-    x, y = 1, 8
+def debug(): #Hatalari test etmek icin fonksiyon
+    from random import randint #rastgele sayi uretmek icin 
+    x, y = 1, 8 #deger araligi
     
     i1 = islem().KupHacmi(randint(x, y))
     i2 = islem().KarePrizmaHacmi(randint(x, y), randint(x, y))
