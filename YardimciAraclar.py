@@ -98,7 +98,7 @@ class islem(): #Düzenli dursun diye islemlerin saklanacagi yer.
             return str(self.HazirMetinler.KoniHacmi.format(r = r,
                                                            yukseklik = h,
                                                            pi = pi,
-                                                           cevap = 1/3*r**2*h))
+                                                           cevap = 1/3*pi*r**2*h))
             
             
 
