@@ -19,9 +19,20 @@ YardimciAraclar.dialog(yardimMetni, 0.01)
 #----------0----1----2----3----4----5----6----7----8-#
 secenek = ["1", "2", "3", "4", "5", "6", "7", "c", "d"]
 
-def kapat(): exit("\nKullanici Tarafindan Kapatildi\n")
+def kapat():
+    """Programı bir mesajla sonlandırır."""
+    exit("\nKullanici Tarafindan Kapatildi\n")
 
-def secim(secilen:str): #Biraz daha duzenli gozuksun diye uygun ciktiyi ureten fonksiyon
+def secim(secilen:str):
+    """
+    Kullanıcının menü seçimini işler.
+
+    Args:
+        secilen: Kullanıcının menü seçimini temsil eden girdisi.
+
+    Returns:
+        Doğrulanmış ve işlenmiş seçim veya bir hata mesajı.
+    """
     x = secilen.lower()
     if x not in secenek: #x secenek listesinde yoksa
         return "\nHatali komut!\n\tBu ({}) bir komut degil.".format(x)
@@ -39,6 +50,15 @@ def secim(secilen:str): #Biraz daha duzenli gozuksun diye uygun ciktiyi ureten f
 
 
 def islemler(komut:str):
+    """
+    Kullanıcının komutuna göre hesaplamayı yürütür.
+
+    Args:
+        komut: İstenen hesaplamaya karşılık gelen komut.
+
+    Returns:
+        Hesaplamanın sonucu veya bir hata mesajı.
+    """
     gecersiz = "\nGECERSIZ VERI\n" #Surekli yazmamak icin degisken
     hesap = YardimciAraclar.islem() #YardimciAraclar.islem() i ornekledim
     
